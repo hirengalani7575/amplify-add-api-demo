@@ -17,7 +17,6 @@ function App() {
 
 
   useEffect(() => {
-
     async function getAllTodos() {
       const allTodos = await API.graphql({ query: queries.listTodos })
       setListTodo(allTodos.data.listTodos.items)
@@ -50,7 +49,6 @@ function App() {
       <header className="App-header">
         <h1>API Demo</h1>
         <AmplifySignOut />
-
         <form onSubmit={handleFormSubmit}>
           <input type="text" name="todo" id="todo" onChange={e => setTodo(e.target.value)} />
           <button type='submit'>Submit</button>
